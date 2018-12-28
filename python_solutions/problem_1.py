@@ -17,5 +17,5 @@ def sum_multiples(multiples, below):
     return sum(multiples_set)
 
 multiples = [3,5]
-total_sum = sum_multiples(multiples, 1000)
-print(total_sum)
+if __name__ == "__main__":
+	print(sum_multiples(multiples, 1000))
