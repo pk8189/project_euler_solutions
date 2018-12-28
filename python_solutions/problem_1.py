@@ -3,14 +3,19 @@
 # The sum of these multiples is 23.
 # Find the sum of all the multiples of 3 or 5 below 1000.
 
-def sum_multiples(num):
-    multiples = []
+def get_multiples(multiples_set, starter, below):
     i = 0
-    while (i + 1) * num < 1000:
+    while (i + 1) * starter < below:
         i += 1
-        multiples.append(i*num)
-    return sum(multiples)
+        multiples_set.add(i*starter)
+    return multiples_set
 
-total_sum = sum_multiples(3) + sum_multiples(5)
+def sum_multiples(multiples, below):
+    multiples_set = set([])
+    for multiple in multiples:
+        get_multiples(multiples_set, multiple, below)
+    return sum(multiples_set)
 
+multiples = [3,5]
+total_sum = sum_multiples(multiples, 1000)
 print(total_sum)
