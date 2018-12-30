@@ -14,6 +14,7 @@ def get_even_fibonacci_sum(max_fib_val):
             totalSum += indexSum
         index1 = index2
         index2 = indexSum
-    return print(totalSum)
+    return totalSum
 
-get_even_fibonacci_sum(4000000)
+if __name__ == "__main__":
+	print(get_even_fibonacci_sum(4000000))
