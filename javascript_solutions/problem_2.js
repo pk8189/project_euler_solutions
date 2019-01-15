@@ -4,7 +4,7 @@
 // By considering the terms in the Fibonacci sequence whose values do not exceed four million, 
 // find the sum of the even-valued terms.
 
-function getEvenFibonacciSum(maxFibValue) {
+const getEvenFibonacciSum = (maxFibValue) => {
   let index1 = 0
   let index2 = 1
   let totalSum = 0
